@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "llm-chatbot"
+version = "0.1.0"
+description = ""
+authors = ["haekyu.cho <haekyu.cho@nhn.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.8"
+uvicorn = "^0.34.0"
+
+[tool.pylint.MASTER]
+init-hook = 'import sys; sys.path.append("./llm_chatbot")'
+
+[tool.pylint.messeges_control]
+disable = ["missing-docstring", "too-few-public-methods"]
+
+[tool.black]
+line-length = 88 # 기본값
+target-version = ['py38'] # 파이썬 버전 지정
+include = '\.pyi?$'
+extend-exclude = '''
+# 제외할 디렉토리나 파일 지정
+/(
+    \.eggs
+  | \.git
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pylint = "^3.3.4"
+black = "^25.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

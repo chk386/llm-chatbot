@@ -1,0 +1,7 @@
+{
+  "python.linting.enabled": true,
+  "python.linting.pylintArgs": ["--rcfile=${workspaceFolder}/pyproject.toml"],
+  "editor.formatOnSave": true,
+  "editor.parameterHints.enabled": true,
+  "python.formatting.provider": "black"
+}

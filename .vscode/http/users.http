@@ -1,0 +1,12 @@
+### GET /users/1
+GET http://localhost:8000/users/123 HTTP/1.1
+
+### POST 요청 예시
+POST https://jsonplaceholder.typicode.com/posts
+Content-Type: application/json
+
+{
+  "title": "foo",
+  "body": "bar",
+  "userId": 1
+}
